@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 접근성 미션</title>
+  <script defer src="index.bundle.js?d0e358f10c8e7d480bdf"></script></head>
+  <body>
+    <article>
+      <h2>승객 선택</h2>
+      <section>
+        <div class="title-container">
+          <h3>성인</h3>
+          <button
+            class="help-box-button"
+            type="button"
+            aria-haspopup="true"
+            aria-controls="help-box"
+            aria-expanded="false"
+          >
+            ?
+          </button>
+          <div
+            id="help-box"
+            role="dialog"
+            aria-live="assertive"
+            aria-relevant="additions"
+          >
+            <!--  -->
+          </div>
+        </div>
+        <div class="counter-container">
+          <button
+            type="button"
+            aria-label="성인 탑승자 1명 감소"
+            class="decrease-passenger-button counter-button disabled-button"
+          >
+            -
+            <span class="aria-hidden">성인 탑승자 1명 감소</span>
+          </button>
+          <input
+            id="adult-passenger-input"
+            type="tel"
+            value="0"
+            aria-valuemin="0"
+            aria-valuemax="3"
+            aria-live="polite"
+            maxlength="1"
+          />
+          <p id="adult-passenger-input" role="tooltip" hidden>
+            텍스트 없이 숫자만 입력.
+          </p>
+          <span aria-live="assertive" aria-relevant="additions" id="aria-adult">
+            <!--  -->
+          </span>
+          <button class="add-passenger-button counter-button" type="button">
+            +
+            <span class="aria-hidden">성인 탑승자 1명 증가</span>
+          </button>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
