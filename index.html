@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>웹 접근성 미션</title>
-  <script defer src="index.bundle.js?d0e358f10c8e7d480bdf"></script></head>
+  <script defer src="index.bundle.js?0cb6bb8e76a9ad03eb31"></script></head>
   <body>
     <article>
       <h2>승객 선택</h2>
@@ -24,6 +24,7 @@
           <div
             id="help-box"
             role="dialog"
+            aria-atomic="true"
             aria-live="assertive"
             aria-relevant="additions"
           >
@@ -51,7 +52,12 @@
           <p id="adult-passenger-input" role="tooltip" hidden>
             텍스트 없이 숫자만 입력.
           </p>
-          <span aria-live="assertive" aria-relevant="additions" id="aria-adult">
+          <span
+            aria-live="assertive"
+            aria-relevant="additions"
+            aria-atomic="true"
+            id="aria-adult"
+          >
             <!--  -->
           </span>
           <button class="add-passenger-button counter-button" type="button">
