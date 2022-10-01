@@ -625,20 +625,14 @@ const handleAddPassengerButton = () => {
     ariaMessageNode.textContent = `성인 승객 증가 ${currentValue}`;
     // ariaMessageNode.classList.add("aria-hidden");
     $ariaAdult === null || $ariaAdult === void 0 ? void 0 : $ariaAdult.insertAdjacentElement("beforeend", ariaMessageNode);
-    setTimeout(() => {
-        $ariaAdult === null || $ariaAdult === void 0 ? void 0 : $ariaAdult.removeChild(ariaMessageNode);
-    }, 0);
 };
 const handleDeletePassengerButton = () => {
     $adultPassengerInput.value = String(Number($adultPassengerInput.value) - 1);
     const currentValue = $adultPassengerInput.value;
     const ariaMessageNode = document.createElement("span");
     ariaMessageNode.textContent = `성인 승객 감소 ${currentValue}`;
-    // ariaMessageNode.classList.add("aria-hidden");
+    ariaMessageNode.classList.add("aria-hidden");
     $ariaAdult === null || $ariaAdult === void 0 ? void 0 : $ariaAdult.insertAdjacentElement("beforeend", ariaMessageNode);
-    setTimeout(() => {
-        $ariaAdult === null || $ariaAdult === void 0 ? void 0 : $ariaAdult.removeChild(ariaMessageNode);
-    }, 0);
 };
 $addPassengerButton === null || $addPassengerButton === void 0 ? void 0 : $addPassengerButton.addEventListener("click", () => {
     const passengerValue = $adultPassengerInput.value;
